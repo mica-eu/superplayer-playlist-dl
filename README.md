@@ -1,5 +1,5 @@
 # superplayer-playlist-dl
-superplayer.fm playlist downloader
+https://superplayer.fm playlist downloader.
 
 ## Installation
 
