@@ -1,0 +1,20 @@
+{
+  "name": "superplayer-playlist-dl",
+  "version": "0.0.0",
+  "description": "superplayer.fm playlist downloader",
+  "main": "index.js",
+  "bin": {
+    "superplayer": "index.js"
+  },
+  "keywords": [
+    "superplayer",
+    "playlist",
+    "downloader"
+  ],
+  "author": "Micael Souza",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.72.0",
+    "sanitize-filename": "^1.6.0"
+  }
+}
