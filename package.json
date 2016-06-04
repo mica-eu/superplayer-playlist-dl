@@ -1,6 +1,6 @@
 {
   "name": "superplayer-playlist-dl",
-  "version": "0.0.0",
+  "version": "0.0.3",
   "description": "superplayer.fm playlist downloader",
   "main": "index.js",
   "bin": {
@@ -16,5 +16,17 @@
   "dependencies": {
     "request": "^2.72.0",
     "sanitize-filename": "^1.6.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micaelsouza/superplayer-playlist-dl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/micaelsouza/superplayer-playlist-dl/issues"
+  },
+  "homepage": "https://github.com/micaelsouza/superplayer-playlist-dl#readme"
 }
