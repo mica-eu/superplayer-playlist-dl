@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = (string) => {
   let str = string.toLowerCase();
 	let map = {

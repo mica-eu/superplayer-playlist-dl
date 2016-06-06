@@ -1,3 +1,5 @@
+"use strict";
+
 const request = require('request');
 const fs = require('fs');
 const sanitize = require("sanitize-filename");

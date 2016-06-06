@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+"use strict";
+
 const fs = require('fs');
 const tokenRequest = require('./token-request.js');
 const getPlaylist = require('./get-playlist.js');

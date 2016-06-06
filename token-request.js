@@ -1,3 +1,5 @@
+"use strict";
+
 const request = require('request');
 
 module.exports = new Promise((resolve, reject) => {
