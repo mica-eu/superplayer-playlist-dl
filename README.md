@@ -7,7 +7,7 @@ https://www.superplayer.fm/player playlist downloader.
 
 ## Use
 
-    $ superplayer [playlist-url]
+    $ superplayer "playlist-url"
     
 The songs will be saved in your personal music folder with the name of the playlist.
 
