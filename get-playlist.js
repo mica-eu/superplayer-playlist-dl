@@ -9,20 +9,7 @@ module.exports = (key, token) => {
     let options = {
       'method': 'POST',
       'url': 'https://api.superplayer.fm/v1/play',
-      'headers': {
-        'cache-control': 'no-cache',
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36',
-        'referer': 'https://www.superplayer.fm/player?source=messenger&playing=trap&language=pt-BR',
-        'origin': 'https://www.superplayer.fm',
-        'host': 'api.superplayer.fm',
-        'content-type': 'application/x-www-form-urlencoded',
-        'content-length': '40',
-        'connection': 'keep-alive',
-        'authorization': `SUPER ${encodeURIComponent(token)}`,
-        'accept-language': 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4',
-        'accept-encoding': 'gzip, deflate, br',
-        'accept': 'application/json, text/javascript, */*; q=0.01'
-      },
+      'headers': {'authorization': `SUPER ${encodeURIComponent(token)}`},
       form: {'playlistskey[]': encodeURIComponent(key), source: 'messenger'}
     };
 

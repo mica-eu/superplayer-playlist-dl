@@ -1,6 +1,6 @@
 {
   "name": "superplayer-playlist-dl",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "superplayer.fm playlist downloader",
   "main": "index.js",
   "bin": {
