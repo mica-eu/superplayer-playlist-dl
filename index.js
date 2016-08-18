@@ -14,7 +14,7 @@ if (!process.argv[2]) {
 
 const playlistsUrl = process.argv[2];
 const playlistsKey = getUrlParams(playlistsUrl).info || getUrlParams(playlistsUrl).playing;
-const songsDir = process.env.USERPROFILE + '/Music/';
+const songsDir = (process.env.USERPROFILE || process.env.HOME) + '/Music/';
 
 if (!fs.existsSync(songsDir)) fs.mkdirSync(songsDir);
 
