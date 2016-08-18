@@ -1,8 +1,7 @@
 {
   "name": "superplayer-playlist-dl",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "superplayer.fm playlist downloader",
-  "main": "index.js",
   "bin": {
     "superplayer": "index.js"
   },
@@ -16,10 +15,6 @@
   "dependencies": {
     "request": "^2.72.0",
     "sanitize-filename": "^1.6.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
