@@ -1,6 +1,6 @@
 {
   "name": "superplayer-playlist-dl",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "superplayer.fm playlist downloader",
   "bin": {
     "superplayer": "index.js"
@@ -14,7 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "request": "^2.72.0",
-    "sanitize-filename": "^1.6.0"
+    "sanitize-filename": "^1.6.0",
+    "superplayer": "^0.3.0"
   },
   "repository": {
     "type": "git",
