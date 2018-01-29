@@ -14,7 +14,8 @@
   "license": "MIT",
   "dependencies": {
     "request": "^2.72.0",
-    "sanitize-filename": "^1.6.0"
+    "sanitize-filename": "^1.6.0",
+    "superplayer": "^0.3.0"
   },
   "repository": {
     "type": "git",

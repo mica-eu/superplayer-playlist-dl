@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 "use strict";
 
+const Superplayer = require('superplayer');
 const fs = require('fs');
-const tokenRequest = require('./token-request.js');
-const getPlaylist = require('./get-playlist.js');
 const download = require('./download.js');
 const getUrlParams = require('./get-url-params.js');
 
@@ -13,17 +12,20 @@ if (!process.argv[2]) {
 }
 
 const playlistsUrl = process.argv[2];
-const playlistsKey = getUrlParams(playlistsUrl).info || getUrlParams(playlistsUrl).playing;
+const playlistsKey = getUrlParams(playlistsUrl).key || getUrlParams(playlistsUrl).playing;
 const songsDir = (process.env.USERPROFILE || process.env.HOME) + '/Music/';
+const playlistsDir = `${songsDir}${playlistsKey}/`;
 
 if (!fs.existsSync(songsDir)) fs.mkdirSync(songsDir);
 
 console.info('Inicializando...');
-tokenRequest.then((token) => {
-  let playlistsDir = `${songsDir}${playlistsKey}/`;
+const superplayer = new Superplayer();
 
-  getPlaylist(playlistsKey, token).then((tracks) => {
-    if (tracks.length >= 0 && !fs.existsSync(playlistsDir)) fs.mkdirSync(playlistsDir);
+superplayer.play(playlistsKey)
+  .then(tracks => {
+    if (tracks.length >= 0 && !fs.existsSync(playlistsDir)) {
+      fs.mkdirSync(playlistsDir);
+    }
 
     (function downloadAllTracks () {
       if (tracks.length == 0) {
@@ -43,6 +45,5 @@ tokenRequest.then((token) => {
         downloadAllTracks();
       });
     }());
-
-  });
-});
+  })
+  .catch(() => console.error('Playlist não encontrada!'));
